@@ -32,6 +32,8 @@ function creation_carrousel(){
     <div class='carrousel'>
     <button class='carrousel__x'>X</button>
     <figure class='carrousel__figure'></figure>
+    <button class='carrousel__precedent'>☜</button>
+    <button class='carrousel__suivant'>☞</button>
     <form class='carrousel__form'></form>
     </div> 
     

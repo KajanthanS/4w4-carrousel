@@ -23,6 +23,26 @@
   color: red;
 }
 
+.carrousel__precedent {
+  position: absolute;
+  background-color: black;
+  color: white;
+  bottom: 10em;
+  left: 3px;
+  font-size: 1.5em;
+  z-index: 3;
+}
+
+.carrousel__suivant {
+  position: absolute;
+  background-color: black;
+  color: white;
+  bottom: 10em;
+  right: 3px;
+  font-size: 1.5em;
+  z-index: 3;
+}
+
 .carrousel--activer {
   transform: scale(1);
 }
