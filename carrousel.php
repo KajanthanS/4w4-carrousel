@@ -28,7 +28,7 @@ function mon_enqueue_css_js(){
 add_action('wp_enqueue_scripts', 'mon_enqueue_css_js');
 
 function creation_carrousel(){
-    return("<button class='carrousel_ouvrir'> Ouvrir le carrousel</button>
+    return("
     <div class='carrousel'>
     <button class='carrousel__x'>X</button>
     <figure class='carrousel__figure'></figure>

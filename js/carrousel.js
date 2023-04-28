@@ -1,6 +1,5 @@
 (function(){
     console.log("Début du carrousel")
-    let carrousel_ouvrir = document.querySelector(".carrousel_ouvrir");
     let carrousel_ouvrir_avec_images = document.querySelector(".wp-block-gallery");
     let carrousel = document.querySelector(".carrousel")
     let carrousel__x = document.querySelector(".carrousel__x");
@@ -14,17 +13,7 @@
     let galerie = document.querySelector(".galerie");
     let galerie__img = galerie.querySelectorAll("img");
 
-    carrousel_ouvrir.addEventListener("mousedown", function(){
-        carrousel.classList.add("carrousel--activer")
-        ajouter_les_images_de_galerie()
     
-    })
-
-    carrousel_ouvrir_avec_images.addEventListener("mousedown", function(){
-        carrousel.classList.add("carrousel--activer")
-        ajouter_les_images_de_galerie()
-
-    })
 
     carrousel__x.addEventListener("mousedown", function(){
         carrousel.classList.remove("carrousel--activer")
@@ -32,7 +21,7 @@
 
     carrousel__precedent.addEventListener("mousedown", function(){
         
-        index= index - 1
+        index = index - 1
         affiche_image_carrousel()
         
        
@@ -54,7 +43,13 @@ let ancienIndex = -1
 // Pour chaque image de la galerie l'ajouter dans le carrousel
 
     for(const elem of galerie__img){
+        elem.dataset.index = position
+        elem.addEventListener("mousedown",function(e){
+            carrousel.classList.add("carrousel--activer")
+            index = e.target.dataset.index
+            affiche_image_carrousel()
 
+        })
         // console.log(elem.getAttribute('src'))
         ajouter_une_image_dans_carrousel(elem)
         ajouter_un_radio_bouton_dans_carrousel()
