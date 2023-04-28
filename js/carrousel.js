@@ -35,16 +35,15 @@
         index= index - 1
         affiche_image_carrousel()
         
+       
         
         
     })
 
     carrousel__suivant.addEventListener("mousedown", function(){
         
-        index = index +1
+        index = index + 1
         affiche_image_carrousel()
-        
-        
         
     })
     
