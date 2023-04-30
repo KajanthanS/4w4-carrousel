@@ -1,6 +1,6 @@
 (function(){
     console.log("Début du carrousel")
-    let carrousel_ouvrir_avec_images = document.querySelector(".wp-block-gallery");
+    let carrousel_ouvrir_avec_images = document.querySelector(".wp-block-image");
     let carrousel = document.querySelector(".carrousel")
     let carrousel__x = document.querySelector(".carrousel__x");
     let carrousel__precedent = document.querySelector(".carrousel__precedent");
