@@ -37,7 +37,7 @@
     })
     
 let position = 0
-let index  = 0
+let index  = [0,3]
 let ancienIndex = -1
 
 // Pour chaque image de la galerie l'ajouter dans le carrousel
@@ -89,7 +89,7 @@ function affiche_image_carrousel(){
         carrousel__figure.children[ancienIndex].style.opacity = "0"
         // carrousel__form.children[ancienIndex].checked = false
         // carrousel__figure.children[ancienIndex].classList.remove("carrousel__img--activer")
-    }
+    } 
     // console.log(this.dataset.index)
     carrousel__figure.children[index].style.opacity = "1"
     // carrousel__figure.children[index].classList.add("carrousel__img--activer")
