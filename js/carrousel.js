@@ -21,7 +21,10 @@
 
     carrousel__precedent.addEventListener("mousedown", function(){
         
-        index = index - 1
+        if (index > 0) {
+            index--
+            console.log(index)
+        }
         affiche_image_carrousel()
         
        
@@ -31,7 +34,11 @@
 
     carrousel__suivant.addEventListener("mousedown", function(){
         
-        index = index + 1
+        if (index < 3) {
+            index++
+            console.log(index)
+        }
+        
         affiche_image_carrousel()
         
     })
@@ -50,7 +57,7 @@ let ancienIndex = -1
             affiche_image_carrousel()
 
         })
-        // console.log(elem.getAttribute('src'))
+        console.log(elem.getAttribute('src'))
         ajouter_une_image_dans_carrousel(elem)
         ajouter_un_radio_bouton_dans_carrousel()
     }
