@@ -37,6 +37,7 @@
         if (index < 3) {
             index++
             console.log(index)
+            
         }
         
         affiche_image_carrousel()
@@ -55,6 +56,7 @@ let ancienIndex = -1
             carrousel.classList.add("carrousel--activer")
             index = e.target.dataset.index
             affiche_image_carrousel()
+            carrousel__form.children[index].checked = true;
 
         })
         console.log(elem.getAttribute('src'))
@@ -94,6 +96,7 @@ function ajouter_un_radio_bouton_dans_carrousel(){
 function affiche_image_carrousel(){
     if(ancienIndex != -1){
         carrousel__figure.children[ancienIndex].style.opacity = "0"
+        carrousel__form.children[index].checked = true;
         // carrousel__form.children[ancienIndex].checked = false
         // carrousel__figure.children[ancienIndex].classList.remove("carrousel__img--activer")
     } 
