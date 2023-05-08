@@ -57,6 +57,9 @@ let ancienIndex = -1
             index = e.target.dataset.index
             affiche_image_carrousel()
             carrousel__form.children[index].checked = true;
+            if (carrousel.classList.contains("carrousel--activer") == false) {
+                carrousel.classList.add("carrousel--activer")
+            }
 
         })
         console.log(elem.getAttribute('src'))
@@ -101,10 +104,44 @@ function affiche_image_carrousel(){
         // carrousel__figure.children[ancienIndex].classList.remove("carrousel__img--activer")
     } 
     // console.log(this.dataset.index)
+    redimensionner_carrousel()
     carrousel__figure.children[index].style.opacity = "1"
     // carrousel__figure.children[index].classList.add("carrousel__img--activer")
     ancienIndex = index
 
+}
+
+function redimensionner_carrousel(){
+    const windowwidth = window.innerWidth
+    const windowheight = window.innerHeight
+    const imagewidth = carrousel__figure.children[index].naturalWidth
+    const imageheight = carrousel__figure.children[index].naturalHeight
+    let carrouselwidth = carrousel.offsetWidth
+    let carrouselheight= carrousel.offsetHeight
+
+    carrouselwidth = windowwidth 
+    if (windowwidth>1000) {
+        carrouselwidth = windowwidth - windowwidth/2
+    }
+    
+    carrouselheight = carrouselwidth * imageheight/imagewidth
+
+    carrousel.style.width = `${carrouselwidth}px`
+    carrousel.style.height = `${carrouselheight}px`
+
+    carrousel.style.left = `${(window.innerWidth - carrouselwidth)/2}px`
+    carrousel.style.top =  `${(window.innerHeight - carrouselheight)/2}px`
+
+    console.log(
+        `windowwidth = ${windowwidth}
+        windowheight = ${windowheight}
+        imageheight = ${imageheight}
+        imagewidth = ${imagewidth}
+        carrouselheight = ${carrouselheight}
+        carrouselwidth = ${carrouselwidth}`
+    )
+
+    
 }
 
 })()
