@@ -13,6 +13,8 @@
 
 }
 
+
+
 .carrousel_ouvrir{
    background-color: black;
    color: white;
@@ -43,8 +45,16 @@
     font-size: 1.5em;
     z-index: 3;
 }
+
+.carrousel__precedent:hover,.carrousel__suivant:hover{
+    background-color: red;
+    color: black;
+    border-color: white;
+}
+
 .carrousel--activer{
     transform: scale(1);
+     
 }
 
 .carrousel__x{
@@ -78,19 +88,23 @@
         width: 100%;
         height: 100%;
         opacity: 0;
+       
         
 
     }
     
 }
 
+
+
 .carrousel__form{
     display: block;
     text-align: center;
     position: absolute;
-    background-color: rgba(102, 102, 102, 0.5);
+    background-color: rgba(62, 60, 60, 0.5);
     bottom: 0;
     width: 100%;
+    height: 8%;
 
 }
 
